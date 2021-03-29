@@ -8,9 +8,15 @@
     
         <div class="container">
             <div class="row">
-                <div class="col-sm-4"><button type="button" class="btn btn-secondary"><%= link_to "Course Info", Course%></button></div>
-                <div class="col-sm-4"><button type="button" class="btn btn-secondary"><%= link_to "Instructor Info", Instructor%></button></div>
-                <div class="col-sm-4"><button type="button" class="btn btn-secondary"><%= link_to "Subject Info", Subject%></button></div>
+                <div class="col-sm-4"><button type="button" class="btn btn-warning"><%= link_to "Course Info", Course%></button></div>
+                <div class="col-sm-4"><button type="button" class="btn btn-warning"><%= link_to "Instructor Info", Instructor%></button></div>
+                <div class="col-sm-4"><button type="button" class="btn btn-warning"><%= link_to "Subject Info", Subject%></button></div>
             </div>
         </div>
+
+        <br>
+        <hr>
+        <% if @user %>
+            <%= button_to "Logout", logout_path, method: :delete %>
+        <% end %>
 </body>
