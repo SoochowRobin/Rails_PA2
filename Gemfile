@@ -24,7 +24,7 @@ gem 'activerecord-import'
 gem 'json'
 gem "better_errors"
 gem "pry-rails"
-
+gem 'bootstrap-sass', '3.3.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
