@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_29_202926) do
+ActiveRecord::Schema.define(version: 2021_03_30_000813) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 2021_03_29_202926) do
     t.string "segment"
     t.string "segment_id"
     t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "course_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

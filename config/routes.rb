@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'searchs/searchR'
+  get 'searchs/displayR'
   get 'starts/login'
   get 'starts/signup'
   get 'sign_up', to:'registrations#new'
@@ -9,6 +11,9 @@ Rails.application.routes.draw do
 
   get 'sign_in', to:'sessions#new'
   post 'sign_in', to:'sessions#create'
+
+  get '/home/search', to:'searchs#index'
+  post '/home/search', to:'searchs#index'
 
   resources :subjects
   resources :courses

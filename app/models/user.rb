@@ -5,5 +5,7 @@
 # password_confirmation:string virtual
 
 class User < ApplicationRecord
+    has_many :enrollments
+    has_many :courses, through: :enrollments
     has_secure_password 
 end
